@@ -6,6 +6,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public abstract class Engine {
+	
+	protected abstract void compressFile(FileInputStream fis, FileOutputStream fos);
+	
+	protected abstract void decompressFile(FileInputStream fis, FileOutputStream fos);
 
 	public void compress(String sourceFile, String compressedFile) {
 		try (
@@ -21,5 +25,18 @@ public abstract class Engine {
 		} 
 	}
 
-	protected abstract void compressFile(FileInputStream fis, FileOutputStream fos);
+	public void decompress(String sourceFile, String decompressedFile) {
+		try (
+			FileInputStream fis = new FileInputStream(sourceFile);
+			FileOutputStream fos = new FileOutputStream(decompressedFile)) {
+			
+			decompressFile(fis, fos);
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 }

@@ -1,4 +1,4 @@
-package com.finalhome.wenger.controller;
+package com.finalhome.wenger;
 	
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -11,9 +11,9 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("/com/finalhome/wenger/view/Converter.fxml"));
+			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("view/Converter.fxml"));
 			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(getClass().getResource("wenger.css").toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("view/wenger.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
