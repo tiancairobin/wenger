@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
-<?import javafx.scene.layout.BorderPane?>
-	
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.finalhome.wenger.controller.ConverterController">
-	<!-- TODO Add Nodes -->
-</BorderPane>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="900.0" prefWidth="1920.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <ListView layoutX="223.0" layoutY="234.0" prefHeight="432.0" prefWidth="561.0" />
+      <Label layoutX="223.0" layoutY="185.0" prefHeight="37.0" prefWidth="293.0" text="Source File List">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="223.0" layoutY="703.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="120.0" text="Open Files" />
+      <ListView layoutX="1091.0" layoutY="234.0" prefHeight="432.0" prefWidth="561.0" />
+      <Label layoutX="1091.0" layoutY="185.0" prefHeight="37.0" prefWidth="286.0" text="Converted File List">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="894.0" layoutY="496.0" mnemonicParsing="false" text="Convert" />
+      <ComboBox layoutX="821.0" layoutY="368.0" prefHeight="36.0" prefWidth="237.0" promptText="Format" />
+   </children>
+</AnchorPane>
